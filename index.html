@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Executive Operations Consulting and Fractional Executive Partner services for founders, CEOs, family offices, real estate principals, and growth-stage businesses." />
+  <meta name="keywords" content="Executive Operations Consultant, Fractional Executive Partner, Founder Support, CEO Support, Executive Assistant Consultant, Chief of Staff Support, Chicago Executive Support" />
+  <meta name="author" content="Jessica Wish-Sakkas" />
+  <title>Jessica Wish-Sakkas | Executive Operations Consultant</title>
+  <style>
+    :root {
+      --ink: #111827;
+      --charcoal: #1f2937;
+      --taupe: #b9a88f;
+      --champagne: #f6f1ea;
+      --soft: #f8f7f4;
+      --white: #ffffff;
+      --muted: #6b7280;
+      --line: #e5e0d8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--ink);
+      background: var(--soft);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      padding: 16px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    nav .brand {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    nav .links a {
+      margin-left: 22px;
+      text-decoration: none;
+      font-size: 14px;
+      color: var(--charcoal);
+    }
+
+    header {
+      background:
+        linear-gradient(rgba(17, 24, 39, 0.82), rgba(17, 24, 39, 0.82)),
+        radial-gradient(circle at top left, #4b5563, #111827);
+      color: white;
+      padding: 100px 28px 110px;
+    }
+
+    .hero {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--taupe);
+      font-size: 13px;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.02;
+      letter-spacing: -1.5px;
+      font-weight: 500;
+    }
+
+    .hero p {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #e5e7eb;
+      font-size: 19px;
+      max-width: 720px;
+      margin-top: 24px;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 20px;
+      padding: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hero-card h3 {
+      color: white;
+      margin-top: 0;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 26px;
+      font-weight: 500;
+    }
+
+    .hero-card ul {
+      padding-left: 18px;
+      color: #f3f4f6;
+    }
+
+    .button-row {
+      margin-top: 34px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .button.primary {
+      background: var(--taupe);
+      color: var(--ink);
+    }
+
+    .button.secondary {
+      border: 1px solid rgba(255,255,255,0.45);
+      color: white;
+    }
+
+    section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 78px 28px;
+    }
+
+    h2 {
+      font-size: clamp(34px, 4vw, 48px);
+      line-height: 1.12;
+      margin: 0 0 20px;
+      font-weight: 500;
+      letter-spacing: -0.8px;
+    }
+
+    .lead {
+      max-width: 820px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      color: var(--charcoal);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 34px;
+      box-shadow: 0 18px 48px rgba(17,24,39,0.06);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      min-height: 220px;
+      box-shadow: 0 14px 38px rgba(17,24,39,0.045);
+    }
+
+    .card h3, .package h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .card p, .package p, .panel p, li {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--charcoal);
+    }
+
+    .tag {
+      display: inline-block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .champagne {
+      background: var(--champagne);
+      max-width: none;
+    }
+
+    .champagne-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 78px 28px;
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .package {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: 0 16px 42px rgba(17,24,39,0.055);
+    }
+
+    .package .price {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+      color: var(--ink);
+      font-size: 18px;
+      margin: 18px 0;
+    }
+
+    .package ul {
+      padding-left: 18px;
+    }
+
+    .testimonial {
+      font-size: 24px;
+      line-height: 1.45;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .quote-source {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--muted);
+      margin-top: 18px;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: white;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .submit-button {
+      border: none;
+      background: var(--ink);
+      color: white;
+      padding: 15px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    footer {
+      background: var(--ink);
+      color: white;
+      padding: 38px 28px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: #d1d5db;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      nav .links {
+        display: none;
+      }
+      .hero, .split, .grid, .packages {
+        grid-template-columns: 1fr;
+      }
+      header {
+        padding: 80px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="brand">Jessica Wish-Sakkas</div>
+  <div class="links">
+    <a href="#services">Services</a>
+    <a href="#packages">Packages</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <div class="hero">
+    <div>
+      <div class="eyebrow">Executive Operations • Founder Support • Strategic Execution</div>
+      <h1>Discreet executive support for leaders operating at a higher level.</h1>
+      <p>
+        I help founders, CEOs, family offices, and growth-stage businesses reclaim time, reduce complexity,
+        and build operating systems that keep business and personal priorities moving seamlessly.
+      </p>
+      <div class="button-row">
+        <a class="button primary" href="mailto:jws.executive.ops@gmail.com">Inquire About Services</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/jessica-wish-sakkas" target="_blank">Connect on LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>What I bring</h3>
+      <ul>
+        <li>Nearly 20 years of executive and operational support</li>
+        <li>Business and personal operations expertise</li>
+        <li>Complex travel, calendar, vendor, and project management</li>
+        <li>High discretion, urgency, and proactive judgment</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="split">
+    <div>
+      <span class="tag">About</span>
+      <h2>Calm, structure, and execution for fast-moving leaders.</h2>
+    </div>
+    <div class="panel">
+      <p>
+        My career has been built behind the scenes, partnering with executives, business owners, principals,
+        and leadership teams to create order, protect time, manage sensitive details, and ensure nothing falls through the cracks.
+      </p>
+      <p>
+        I specialize in the intersection of executive support, operations, logistics, and trusted problem-solving.
+        Whether supporting a CEO, founder, family office, real estate principal, or growth-stage business, my role is to
+        create capacity and bring structure to complexity.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <span class="tag">Services</span>
+  <h2>Executive operations designed around your priorities.</h2>
+  <p class="lead">
+    Support can be project-based, ongoing, or fractional depending on the level of structure and execution your business needs.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Executive Operations</h3>
+      <p>Calendar architecture, inbox workflows, meeting cadence, task systems, communication flow, and executive prioritization.</p>
+    </div>
+    <div class="card">
+      <h3>Fractional Executive Partner</h3>
+      <p>High-trust support for founders and executives who need consistent operational partnership without a full-time hire.</p>
+    </div>
+    <div class="card">
+      <h3>Founder & CEO Support</h3>
+      <p>Gatekeeping, travel, stakeholder communication, briefing preparation, follow-through, and day-to-day execution.</p>
+    </div>
+    <div class="card">
+      <h3>Systems & SOPs</h3>
+      <p>Process documentation, onboarding checklists, admin playbooks, vendor procedures, and scalable operating systems.</p>
+    </div>
+    <div class="card">
+      <h3>Special Projects</h3>
+      <p>Project tracking, vendor sourcing, event coordination, operational clean-up, research, and implementation support.</p>
+    </div>
+    <div class="card">
+      <h3>Business & Personal Logistics</h3>
+      <p>Complex travel, household/vendor coordination, reservations, residences, vehicles, and personal operations support.</p>
+    </div>
+  </div>
+</section>
+
+<div class="champagne" id="packages">
+  <div class="champagne-inner">
+    <span class="tag">Packages</span>
+    <h2>Ways to work together.</h2>
+    <p class="lead">
+      These sample engagements can be customized based on scope, urgency, and the level of support required.
+    </p>
+
+    <div class="packages">
+      <div class="package">
+        <h3>Executive Operations Audit</h3>
+        <p>A focused review of your calendar, meetings, inbox, workflows, and operational friction points.</p>
+        <div class="price">Project-Based</div>
+        <ul>
+          <li>Workflow assessment</li>
+          <li>Recommendations roadmap</li>
+          <li>Priority improvements</li>
+          <li>Implementation options</li>
+        </ul>
+      </div>
+
+      <div class="package">
+        <h3>Operating System Setup</h3>
+        <p>Build a customized structure for scheduling, communication, travel, tasks, documents, and follow-through.</p>
+        <div class="price">Project-Based or Intensive</div>
+        <ul>
+          <li>Calendar structure</li>
+          <li>Task management workflow</li>
+          <li>Meeting templates</li>
+          <li>SOP documentation</li>
+        </ul>
+      </div>
+
+      <div class="package">
+        <h3>Fractional Executive Partner</h3>
+        <p>Ongoing monthly support for executives who need a trusted operator and strategic right hand.</p>
+        <div class="price">Monthly Retainer</div>
+        <ul>
+          <li>Executive support</li>
+          <li>Project coordination</li>
+          <li>Logistics management</li>
+          <li>Priority tracking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="split">
+    <div>
+      <span class="tag">Clients</span>
+      <h2>Built for leaders who need more capacity.</h2>
+    </div>
+    <div class="panel">
+      <ul>
+        <li>Founders and CEOs</li>
+        <li>C-suite executives and senior leadership teams</li>
+        <li>Family offices and private clients</li>
+        <li>Real estate principals and investors</li>
+        <li>Professional services firms</li>
+        <li>Growth-stage businesses</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="tag">Testimonials</span>
+  <h2>Trusted, discreet, and execution-focused.</h2>
+  <div class="grid">
+    <div class="card">
+      <p class="testimonial">“Jessica brings calm, organization, and follow-through to fast-moving environments.”</p>
+      <p class="quote-source">— Executive Client</p>
+    </div>
+    <div class="card">
+      <p class="testimonial">“She anticipates needs, protects time, and keeps complex priorities moving.”</p>
+      <p class="quote-source">— Founder / Principal</p>
+    </div>
+    <div class="card">
+      <p class="testimonial">“A trusted partner for both business and personal operations.”</p>
+      <p class="quote-source">— Senior Leader</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="split">
+    <div>
+      <span class="tag">Inquiries</span>
+      <h2>Ready to create more time and structure?</h2>
+      <p class="lead">
+        For consulting, fractional executive support, project-based operations, or founder support inquiries,
+        please reach out directly.
+      </p>
+      <p class="lead"><strong>Email:</strong> <a href="mailto:jws.executive.ops@gmail.com">jws.executive.ops@gmail.com</a></p>
+      <p class="lead"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jessica-wish-sakkas" target="_blank">linkedin.com/in/jessica-wish-sakkas</a></p>
+      <p class="lead"><strong>Calendly:</strong> Add your booking link here when ready.</p>
+    </div>
+
+    <div class="panel">
+      <form action="mailto:jws.executive.ops@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Name" />
+        <input type="email" name="email" placeholder="Email" />
+        <select name="service">
+          <option value="">What are you looking for?</option>
+          <option>Executive Operations Audit</option>
+          <option>Fractional Executive Partner</option>
+          <option>Founder / CEO Support</option>
+          <option>Systems & SOPs</option>
+          <option>Special Project Support</option>
+        </select>
+        <textarea name="message" placeholder="Tell me a little about your needs."></textarea>
+        <button class="submit-button" type="submit">Send Inquiry</button>
+        <p class="form-note">Note: On GitHub Pages, this form opens your email app. For a true web form, connect Formspree, Tally, Typeform, or Calendly.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 Jessica Wish-Sakkas. Executive Operations Consulting.</div>
+    <div>jws.executive.ops@gmail.com</div>
+  </div>
+</footer>
+
+</body>
+</html>
